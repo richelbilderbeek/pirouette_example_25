@@ -7,6 +7,6 @@
 #   ./scripts/rerun.sh
 #
 #
-rm -rf example_24_314
-Rscript example_24.R
+rm -rf example_25_314
+Rscript example_25.R
 
