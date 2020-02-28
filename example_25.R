@@ -4,7 +4,6 @@
 # but 100 different alignment RNG seed.
 
 suppressMessages(library(pirouette))
-suppressMessages(library(ggplot2))
 
 ################################################################################
 # Constants
@@ -35,6 +34,7 @@ for (rng_seed in seq(314, 318)) {
 
   pir_save(
     phylogeny = phylogeny,
+    pir_params = pir_params,
     pir_out = pir_out,
     folder_name = folder_name
   )
