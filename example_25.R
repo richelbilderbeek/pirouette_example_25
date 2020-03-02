@@ -2,29 +2,48 @@
 #
 # Measure the influence of the alignment RNG, by using a same twin tree,
 # but 100 different alignment RNG seed.
-suppressMessages(library(pirouette))
-
 # Constants
+example_no <- 28
+rng_seed <- 314
+crown_age <- 10
+n_phylogenies <- 5
 is_testing <- is_on_travis()
-example_no <- 25
-for (rng_seed in seq(314, 318)) {
-  print(rng_seed)
-  folder_name <- paste0("example_", example_no, "_", rng_seed)
-  set.seed(314) # Always the same
-  phylogeny <- create_yule_tree(n_taxa = 6, crown_age = 10)
-  pir_params <- create_std_pir_params(folder_name = folder_name)
-  pir_params$twinning_params$rng_seed_twin_tree <- 314 # Always the same
-  if (is_testing) {
-    pir_params <- shorten_pir_params(pir_params)
-  }
-  pir_out <- pir_run(
-    phylogeny,
-    pir_params = pir_params
-  )
+if (is_testing) {
+  n_phylogenies <- 2
+}
+
+# Create the one phylogeny
+phylogenies <- list()
+phylogeny <- create_yule_tree(n_taxa = 6, crown_age = 10)
+for (i in seq_len(n_phylogenies)) {
+  phylogenies[[i]] <- phylogeny
+}
+expect_equal(length(phylogenies), n_phylogenies)
+
+# Create pirouette parameter sets
+pir_paramses <- create_std_pir_paramses(n = length(phylogenies))
+for (i in seq_along(pir_paramses)) {
+  pir_paramses[[i]]$twinning_params$rng_seed_twin_tree <- 314 # Always the same
+}
+expect_equal(length(pir_paramses), n_phylogenies)
+if (is_testing) {
+  pir_paramses <- shorten_pir_params(pir_paramses)
+}
+
+# Do the runs
+pir_outs <- pir_runs(
+  phylogenies = phylogenies,
+  pir_paramses = pir_paramses
+)
+
+# Save
+expect_equal(length(pir_paramses), length(pir_outs))
+expect_equal(length(pir_paramses), length(phylogenies))
+for (i in seq_along(pir_outs)) {
   pir_save(
-    phylogeny = phylogeny,
-    pir_params = pir_params,
-    pir_out = pir_out,
-    folder_name = folder_name
+    phylogeny = phylogenies[[i]],
+    pir_params = pir_paramses[[i]],
+    pir_out = pir_outs[[i]],
+    folder_name = dirname(pir_paramses[[i]]$alignment_params$fasta_filename)
   )
 }
