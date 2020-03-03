@@ -2,6 +2,10 @@
 #
 # Measure the influence of the alignment RNG, by using a same twin tree,
 # but 100 different alignment RNG seed.
+library(pirouette)
+library(beautier)
+library(beastier)
+
 # Constants
 example_no <- 28
 rng_seed <- 314
