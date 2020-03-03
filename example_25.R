@@ -32,7 +32,7 @@ for (i in seq_along(pir_paramses)) {
 }
 expect_equal(length(pir_paramses), n_phylogenies)
 if (is_testing) {
-  pir_paramses <- shorten_pir_params(pir_paramses)
+  pir_paramses <- shorten_pir_paramses(pir_paramses)
 }
 
 # Do the runs
