@@ -5,6 +5,7 @@
 library(pirouette)
 library(beautier)
 library(beastier)
+library(testthat)
 
 # Constants
 example_no <- 28
