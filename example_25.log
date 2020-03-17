@@ -1,0 +1,55 @@
+Loading required package: beautier
+Loading required package: babette
+Loading required package: beastier
+Loading required package: mauricer
+Loading required package: tracerer
+Registered S3 method overwritten by 'pryr':
+  method      from
+  print.bytes Rcpp
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+
+real	170m18.631s
+user	154m22.521s
+sys	5m24.468s
+
+
+###############################################################################
+Peregrine Cluster
+Job 10159245 for user 'p230198'
+Finished at: Tue Mar 17 15:19:24 CET 2020
+
+Job details:
+============
+
+Name                : pirex25
+User                : p230198
+Partition           : regular
+Nodes               : pg-node025
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-03-17T12:28:40
+Start               : 2020-03-17T12:29:04
+End                 : 2020-03-17T15:19:24
+Reserved walltime   : 1-00:00:00
+Used walltime       :   02:50:20
+Used CPU time       :   02:39:47 (efficiency: 93.81%)
+% User (Computation): 96.61%
+% System (I/O)      :  3.39%
+Mem reserved        : 10G/node
+Max Mem used        : 959.40M (pg-node025)
+Max Disk Write      : 71.68K (pg-node025)
+Max Disk Read       : 1.35M (pg-node025)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################

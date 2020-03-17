@@ -1,0 +1,18 @@
+<itsabeastystatewerein version='2.0' sample='10000000'>
+<statenode id='Tree.t:alignment'>(((0:0.40453432176226367,(1:0.029387405746264146,2:0.029387405746264146)8:0.37514691601599953)6:0.10297885243985205,(4:0.09884290919956519,5:0.09884290919956519)9:0.40867026500255055)7:0.42639009261356653,3:0.9339032668156823)10:0.0</statenode>
+<statenode id='BDBirthRate.t:alignment'>BDBirthRate.t:alignment[1 1] (0.0,10000.0): 3.579463076923369 </statenode>
+<statenode id='BDDeathRate.t:alignment'>BDDeathRate.t:alignment[1 1] (0.0,1.0): 0.018006759329347963 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"BirthRateScaler.t:alignment","p":0.19067802193762765,"accept":107783,"reject":276339,"acceptFC":106871,"rejectFC":276124,"rejectIv":0,"rejectOp":0},
+{"id":"DeathRateScaler.t:alignment","p":0.14120770246437386,"accept":96285,"reject":287011,"acceptFC":95353,"rejectFC":286847,"rejectIv":187964,"rejectOp":187964},
+{"id":"BirthDeathTreeScaler.t:alignment","p":0.7802214725280783,"accept":80119,"reject":304217,"acceptFC":80031,"rejectFC":303221,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathTreeRootScaler.t:alignment","p":0.6033148927440728,"accept":82397,"reject":301547,"acceptFC":82222,"rejectFC":300643,"rejectIv":31,"rejectOp":31},
+{"id":"BirthDeathUniformOperator.t:alignment","p":"NaN","accept":324675,"reject":3518143,"acceptFC":323637,"rejectFC":3508061,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathSubtreeSlide.t:alignment","p":0.239945731532039,"accept":225359,"reject":1701070,"acceptFC":225170,"rejectFC":1695645,"rejectIv":431818,"rejectOp":431818},
+{"id":"BirthDeathNarrow.t:alignment","p":"NaN","accept":7157,"reject":1918421,"acceptFC":7128,"rejectFC":1913039,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathWide.t:alignment","p":"NaN","accept":167,"reject":383842,"acceptFC":166,"rejectFC":382702,"rejectIv":213631,"rejectOp":213631},
+{"id":"BirthDeathWilsonBalding.t:alignment","p":"NaN","accept":59,"reject":385410,"acceptFC":57,"rejectFC":384241,"rejectIv":197283,"rejectOp":197283}
+]}
+-->
