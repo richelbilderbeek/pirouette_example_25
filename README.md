@@ -9,13 +9,13 @@ A [pirouette example](https://github.com/richelbilderbeek/pirouette_examples).
 
 ## Results
 
-![](example_25_314/errors.png)
+![](example_25/errors.png)
 
-![](example_25_315/errors.png)
+### Individual results
 
-![](example_25_316/errors.png)
-
-![](example_25_317/errors.png)
-
-![](example_25_318/errors.png)
+![](example_25/314/errors.png)
+![](example_25/315/errors.png)
+![](example_25/316/errors.png)
+![](example_25/317/errors.png)
+![](example_25/318/errors.png)
 
