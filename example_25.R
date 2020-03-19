@@ -12,7 +12,7 @@ library(ggplot2)
 example_no <- 25
 rng_seed <- 314
 crown_age <- 10
-n_phylogenies <- 5
+n_phylogenies <- 10
 folder_name <- paste0("example_", example_no)
 is_testing <- is_on_ci()
 if (is_testing) {
@@ -49,7 +49,7 @@ pir_outs <- pir_runs(
 # Save summary
 pir_plots(pir_outs) +
   ggtitle(paste("Number of replicates: ", n_phylogenies)) +
-  ggsave(file.path(folder_name, "errors.png"), width = 7, height = 7)
+  ggsave("errors.png", width = 7, height = 7)
 
 # Save
 expect_equal(length(pir_paramses), length(pir_outs))
